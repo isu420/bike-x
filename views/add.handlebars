@@ -1,0 +1,38 @@
+<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-center">
+						<div class="banner-content col-lg-7 col-md-6 ">
+							<h6 class="text-white ">OUR BIKES YOUR JOURNEYS</h6>
+							<h1 class="text-white text-uppercase">
+								ADD A NEW BIKE TO COLLECTION				
+							</h1>
+              	<h1 class="text-white text-uppercase">
+								<p class="pt-20 pb-20 text-white">
+							</p>
+						</div>
+						<div class="col-lg-5  col-md-6 header-right">
+							<h4 class="text-white pb-30">Add bike to collection !</h4>
+              <h4 class="text-white pb-30">Enter the details of the bike to be listed for rental</h4>
+
+
+							<form action="/gigs/add" method="POST" class="form" role="form" autocomplete="off">
+
+                <div class="form-group">
+							    	<input class="form-control txt-field" type="text" name="title" placeholder="Bike Title" value={{title}}>
+							    	<input class="form-control txt-field" type="text" name="pickup" placeholder="Pickup" value={{email}}>
+							    	<input class="form-control txt-field" type="tel" name="rate_per_day" placeholder="Rate per day" value={{rate_per_day}}>
+                    <input class="form-control txt-field" type="text" name="description" placeholder="Bike Description" value={{description}}>
+                    <input class="form-control txt-field" type="text" name="engine" placeholder="Bike Engine" value={{engine}}>
+                    
+							  </div>   
+							    <div class="form-group row">
+							        <div class="col-md-12">
+							            <button class="btn btn-default btn-lg btn-block text-center text-uppercase">Add Bike</button>
+							        </div>
+							    </div>
+							</form>
+						</div>											
+					</div>
+				</div>					
+</section>
