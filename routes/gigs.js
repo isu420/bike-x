@@ -51,17 +51,14 @@ router.post('/add', (req, res) => {
 
 // Search for gigs
 router.get('/search', (req, res) => {
-  const term = req.body;
+  const term = req.query.pickup;
+console.log(JSON.stringify(term));
 
   // Make lowercase
   
 
   Gig.findAll({ where: { pickup: { [Op.like]: '%' + term + '%' } } })
-    // .then(gigs => res.render('gigs', { gigs }))
-    .then(gigs=>{
-      console.log(gigs);
-      
-    })
+    .then(gigs => res.render('gigs', { gigs }))
     .catch(err => console.log(err));
 });
 
